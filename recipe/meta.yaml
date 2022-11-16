@@ -1,4 +1,4 @@
-{% set version = "0.4-7" %}
+{% set version = "0.4-8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/kappalab_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/kappalab/kappalab_{{ version }}.tar.gz
-  sha256: 00571c3e2022f65020aec1d3400b46ec390e90078f8f8bfc3e5ce08a395f7c99
+  sha256: 9960b581bce0d48ce8124bf4ce62cb09790e95d9b92c0e4392c91110991d79f9
 
 build:
   merge_build_host: true  # [win]
-  number: 1003
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/

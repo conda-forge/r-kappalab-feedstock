@@ -21,6 +21,8 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib('c') }}        # [not win]
+    - {{ stdlib('m2w64_c') }}        # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -44,7 +46,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=kappalab
-  license: CeCILL
+  license: CECILL-2.0
   license_file: LICENCE
   summary: 'S4 tool box for capacity (or non-additive measure, fuzzy measure) and integral manipulation in a finite setting. It contains routines for handling various types of set functions such as games or capacities. It can be used to compute several non-additive integrals: the Choquet integral, the Sugeno integral, and
     the symmetric and asymmetric Choquet integrals. An analysis of capacities in terms of decision behavior can be performed through the computation of various indices such as the Shapley value, the interaction index, the orness degree, etc. The well-known Möbius transform, as well as other equivalent representations of
